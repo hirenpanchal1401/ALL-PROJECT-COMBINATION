@@ -1,0 +1,24 @@
+<h3 class="text-primary">1.String Concatenation:</h3>
+<label class="text-primary">First Name</label>
+<input type="text" class="form-control" #f [(ngModel)]="first" name="first">
+<br/>
+<label class="text-primary">Last Name</label>
+<input type="text" class="form-control" #l [(ngModel)]="last" name="last">
+<br/>
+<h3 class="text-info"><span class="text-warning">{{ MyName(f.value,l.value) }}</span> :THE NAME IS ENOUGH</h3>
+
+<hr/>
+
+<h3 class="text-danger">2.Reverse of {{rev}} is: {{ reverse(r.value) }}</h3>
+<br/>
+<label class="text-danger">Enter Something</label>
+<input type="text" class="form-control" #r [(ngModel)]="rev" name="rev">
+
+<hr/>
+
+<h3 class="text-success">3.Number of vowels and consonent</h3>
+<br/>
+<label class="text-success">Enter Text</label>
+<input type="text" class="form-control" #g [(ngModel)]="gram" name="gram">
+<br/>
+<h3 class="text-warning">{{ grammer(g.value) }}</h3>

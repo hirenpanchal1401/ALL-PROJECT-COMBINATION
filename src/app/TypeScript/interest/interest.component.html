@@ -1,0 +1,7 @@
+<label><h4 class="text-success">Principal Amount</h4></label><input type="text" class="form-control" #p [(ngModel)]="principal" placeholder="Enter Principal Amount">
+<br/>
+<label><h4 class="text-success">Rate of Interest</h4></label><input type="text" class="form-control" #r [(ngModel)]="rate"      placeholder="Enter Rate Of Interest">
+<br/>
+<label><h4 class="text-success">Year</h4></label><input type="text" class="form-control" #y [(ngModel)]="year"      placeholder="Enter Time Duration In Year">
+<br/>
+<h3 class="text-primary">Simple Interest of {{principal}} Rs for {{year}} year at the rate of {{rate}}% is: {{ SimpleInt(p,r,y) }} Rs</h3>

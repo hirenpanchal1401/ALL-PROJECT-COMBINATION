@@ -1,0 +1,29 @@
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>
+        <span class="text-success">Id</span>
+      </th>
+      <th>
+        <span class="text-primary">Name</span>
+      </th>
+      <th>
+        <span class="text-danger">College</span>
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor = "let x of employees">
+      <td>
+        <span class="text-success">{{x.id}}</span>
+      </td>
+      <td>
+        <span class="text-primary">{{x.name}}</span>
+      </td>
+      <td>
+        <span class="text-danger">{{x.college}}</span>
+      </td>
+    </tr>
+  </tbody>
+</table>

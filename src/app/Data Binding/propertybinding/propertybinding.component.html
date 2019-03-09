@@ -1,0 +1,12 @@
+<div>
+  <input type="text" id="myId" class="form-control" [value]="value">
+  <br/>
+  <br/>
+  <input type="text" [disabled]="false" class="form-control" placeholder="normal property binding">
+  <br/>
+  <br/>
+  <input type="text" [disabled]="isDisabled" class="form-control" placeholder="take value from component">
+  <br/>
+  <br/>
+  <input type="text" bind-disabled = "isDisabled" class="form-control" placeholder="second method property binding">
+</div>

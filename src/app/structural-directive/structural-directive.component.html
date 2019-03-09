@@ -1,0 +1,54 @@
+<h3 class="text-success">Structural Directive Example</h3>
+<br/>
+<br/>
+<div class="container">
+  <div class="row">
+      <div class="col-md-9">
+          <table class="table table-bordered">
+              <thead>
+                  <tr>
+                      <th>
+                          <h4  class="text-primary">ID</h4>
+                      </th>
+                      <th>
+                        <h4  class="text-primary">Name</h4>
+                      </th>
+                      <th>
+                        <h4  class="text-primary">City</h4>
+                      </th>
+                      <th>
+                        <h4  class="text-primary">Mark</h4>
+                      </th>
+                      <th>
+                        <h4  class="text-primary">Hobbies</h4>
+                      </th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr *ngFor="let student of studentList">
+                      <td><h4  class="text-info">{{student.sid}}</h4></td>
+                      <td><h4  class="text-info">{{student.sname}}</h4></td>
+                      <td><h4  class="text-info">{{student.scity}}</h4></td>
+                      <td>
+                         <p *ngIf="student.smarks>=35; else elseBlock">
+                             <span style="color:green">{{student.smarks}}</span>
+                         </p> 
+                         <ng-template #elseBlock>
+                              <span style="color:red">{{student.smarks}}</span>
+                         </ng-template>
+                      </td>
+                      <td>
+                        <!-- <p *ngIf="student.hobbies.length>=4">User Hobby has ({{student.hobbies.length}}) count</p>   -->
+                          
+                          <ul>
+                              <li *ngFor="let s of student.hobbies">
+                                <h4  class="text-info">{{s}}</h4>
+                              </li>
+                          </ul>
+                      </td>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+<ng-container *ngIf="display; then thenTemplate; else elseTemplate"></ng-container>
+<ng-template #thenTemplate>
+  <h3 class="text-success">If Block</h3>  
+</ng-template>
+<ng-template #elseTemplate>
+  <h3 class="text-warning">Else Block</h3>
+</ng-template>
+
+<!--  Second Example -->
+<!--
+<h3 *ngIf="display"; else elseBlock> if block </h3>
+<ng-template #elseBlock>
+    <h3>else block</h3>
+</ng-template>
+
+-->
